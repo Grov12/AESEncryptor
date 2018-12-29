@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="411.0" prefWidth="542.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="404.0" prefWidth="545.0">
+         <children>
+            <Label fx:id="headLabel" layoutX="55.0" layoutY="27.0" prefHeight="25.0" prefWidth="428.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <ImageView fx:id="imageview1" fitHeight="297.0" fitWidth="553.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../hola.png" />
+               </image></ImageView>
+            <ImageView fx:id="imageView2" fitHeight="136.0" fitWidth="552.0" layoutY="0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="keyValue" layoutX="117.0" layoutY="108.0" prefHeight="25.0" prefWidth="304.0" />
+            <TextField fx:id="ivValue" layoutX="117.0" layoutY="147.0" prefHeight="25.0" prefWidth="304.0" />
+            <Button layoutX="305.0" layoutY="262.0" mnemonicParsing="false" onAction="#encryptionButton" prefHeight="40.0" prefWidth="103.0" stylesheets="@style.css" text="Encrypt Files" />
+            <Button layoutX="207.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchScene" prefHeight="40.0" prefWidth="110.0" stylesheets="@style.css" text="Generate Key" />
+            <Label layoutX="39.0" layoutY="110.0" prefHeight="17.0" prefWidth="70.0" text="Secret key" />
+            <Label layoutX="39.0" layoutY="151.0" prefHeight="17.0" prefWidth="70.0" text="IV-value" />
+            <Button fx:id="fileChooseButton" layoutX="368.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleFileChooser" prefHeight="25.0" prefWidth="83.0" stylesheets="@style.css" text="File" />
+            <Label fx:id="listView" layoutX="126.0" layoutY="197.0" prefHeight="17.0" prefWidth="207.0" />
+            <Button id="decryptButton" fx:id="decryptButton" layoutX="109.0" layoutY="262.0" mnemonicParsing="false" onAction="#decryptButton" prefHeight="40.0" prefWidth="110.0" styleClass="decryptButton" stylesheets="@style.css" text="Decrypt Files">
+               <effect>
+                  <Blend />
+               </effect></Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
